@@ -8,7 +8,6 @@
 **Le plugin Discord Rich Presence complet pour Unreal Engine.**
 *Zéro dépendance. Source C++ complète. Pensé pour Blueprint.*
 
-[![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.4%20-%205.8-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)](https://www.unrealengine.com)
 [![Plateforme](https://img.shields.io/badge/Plateforme-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 [![Fab](https://img.shields.io/badge/Disponible%20sur-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
@@ -788,7 +787,7 @@ Discord.
 [![Discord](https://img.shields.io/badge/Poser%20une%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
 [![Fab](https://img.shields.io/badge/Fab-Fiche%20produit-FF6B00?style=for-the-badge)](FAB_LISTING_LINK)
 
-*Développé et maintenu par l'auteur de Twitch StreamSync.*
+*Développé par Kybrien, l'auteur de Twitch StreamSync.*
 
 </div>
 
@@ -797,9 +796,11 @@ Discord.
 <div align="center">
 <sub>
 
-**EVEN RICHER DISCORD PRESENCE IS AN INDEPENDENT UNREAL ENGINE PLUGIN AND IS NOT AFFILIATED WITH,
-ENDORSED BY, OR SPONSORED BY DISCORD INC. ALL DISCORD TRADEMARKS, LOGOS AND BRAND NAMES ARE THE
-PROPERTY OF THEIR RESPECTIVE OWNERS.**
+**EVEN RICHER DISCORD PRESENCE IS AN INDEPENDENT UNREAL ENGINE PLUGIN AND IS NOT AFFILIATED WITH,**
+
+**ENDORSED BY, OR SPONSORED BY DISCORD INC. ALL DISCORD TRADEMARKS, LOGOS AND BRAND NAMES ARE THE**
+
+**PROPERTY OF THEIR RESPECTIVE OWNERS.**
 
 Copyright 2026 Kybrien. All Rights Reserved.
 
