@@ -12,7 +12,7 @@
 [![Fab](https://img.shields.io/badge/Disponible%20sur-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
 
-[🇬🇧 English documentation](README.md) · **🇫🇷 Français**
+[English documentation](README.md) · **Français**
 
 [Installation](#-installation) · [Démarrage rapide](#-démarrage-rapide) · [Référence des nœuds](#-référence-des-nœuds) · [Recettes](#-recettes) · [Dépannage](#-dépannage)
 
