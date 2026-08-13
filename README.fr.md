@@ -10,7 +10,7 @@
 
 [![Plateforme](https://img.shields.io/badge/Plateforme-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 [![Fab](https://img.shields.io/badge/Disponible%20sur-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
-[![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
+[![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
 
 [English documentation](README.md) · **Français**
 
@@ -784,7 +784,7 @@ Discord.
 
 **Un bug ? Une fonctionnalité manquante ? Une question ?**
 
-[![Discord](https://img.shields.io/badge/Poser%20une%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
+[![Discord](https://img.shields.io/badge/Poser%20une%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
 [![Fab](https://img.shields.io/badge/Fab-Fiche%20produit-FF6B00?style=for-the-badge)](FAB_LISTING_LINK)
 
 *Développé par Kybrien, l'auteur de Twitch StreamSync.*
