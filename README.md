@@ -12,7 +12,7 @@
 [![Fab](https://img.shields.io/badge/Get%20it%20on-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
 
-**🇬🇧 English** · [🇫🇷 Documentation en français](README.fr.md)
+**English** · [Documentation en français](README.fr.md)
 
 [Setup](#-setup) · [Quick start](#-quick-start) · [Node reference](#-node-reference) · [Recipes](#-recipes) · [Troubleshooting](#-troubleshooting)
 
