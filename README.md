@@ -9,7 +9,7 @@
 *Zero dependencies. Full C++ source. Blueprint first.*
 
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
-[![Fab](https://img.shields.io/badge/Get%20it%20on-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
+[![Fab](https://img.shields.io/badge/Get%20it%20on-Fab-5865F2?style=for-the-badge)](https://www.fab.com/sellers/Kybrien)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
 
 **English** · [Documentation en français](README.fr.md)
@@ -769,7 +769,7 @@ EOS. This is not a limitation of this plugin, it is how Discord Rich Presence wo
 **Found a bug? Need a feature? Have a question?**
 
 [![Discord](https://img.shields.io/badge/Poser%20une%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
-[![Fab](https://img.shields.io/badge/Fab-Listing-FF6B00?style=for-the-badge)](FAB_LISTING_LINK)
+[![Fab](https://img.shields.io/badge/Fab-Listing-FF6B00?style=for-the-badge)](https://www.fab.com/sellers/Kybrien)
 
 *Built by Kybrien, the developer of Twitch StreamSync.*
 
