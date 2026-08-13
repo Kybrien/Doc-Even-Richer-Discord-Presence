@@ -8,7 +8,6 @@
 **The complete Discord Rich Presence plugin for Unreal Engine.**
 *Zero dependencies. Full C++ source. Blueprint first.*
 
-[![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.4%20-%205.8-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)](https://www.unrealengine.com)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 [![Fab](https://img.shields.io/badge/Get%20it%20on-Fab-5865F2?style=for-the-badge)](FAB_LISTING_LINK)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
@@ -772,7 +771,7 @@ EOS. This is not a limitation of this plugin, it is how Discord Rich Presence wo
 [![Discord](https://img.shields.io/badge/Ask%20on-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](YOUR_DISCORD_INVITE)
 [![Fab](https://img.shields.io/badge/Fab-Listing-FF6B00?style=for-the-badge)](FAB_LISTING_LINK)
 
-*Built and supported by the developer of Twitch StreamSync.*
+*Built by Kybrien, the developer of Twitch StreamSync.*
 
 </div>
 
@@ -781,9 +780,11 @@ EOS. This is not a limitation of this plugin, it is how Discord Rich Presence wo
 <div align="center">
 <sub>
 
-**EVEN RICHER DISCORD PRESENCE IS AN INDEPENDENT UNREAL ENGINE PLUGIN AND IS NOT AFFILIATED WITH,
-ENDORSED BY, OR SPONSORED BY DISCORD INC. ALL DISCORD TRADEMARKS, LOGOS AND BRAND NAMES ARE THE
-PROPERTY OF THEIR RESPECTIVE OWNERS.**
+**EVEN RICHER DISCORD PRESENCE IS AN INDEPENDENT UNREAL ENGINE PLUGIN AND IS NOT AFFILIATED WITH,**
+
+**ENDORSED BY, OR SPONSORED BY DISCORD INC. ALL DISCORD TRADEMARKS, LOGOS AND BRAND NAMES ARE THE**
+
+**PROPERTY OF THEIR RESPECTIVE OWNERS.**
 
 Copyright 2026 Kybrien. All Rights Reserved.
 
