@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- PLACEHOLDER : ton logo ici, 200px de large rend le mieux -->
-<img src="docs/images/Icon128.png" alt="Even Richer Discord Presence" width="200"/>
+<img src="docs/images/Icon128.png" alt="Even Richer Discord Presence" width="128"/>
 
 # Even Richer Discord Presence
 
