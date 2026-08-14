@@ -91,7 +91,7 @@ direct `https://` URL, which works instantly and is handy for testing.
 | **Auto Subscribe To Activity Events** | ✅ | Subscribes to Join and Ask to Join automatically. |
 
 <!-- PLACEHOLDER: screenshot of the Project Settings panel -->
-<img src="docs/images/setup-settings.png" alt="Project Settings" width="70%"/>
+<img src="docs/images/ProjectSettings.png" alt="Project Settings" width="70%"/>
 
 ### 5. Enable activity display in Discord
 
