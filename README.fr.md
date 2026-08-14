@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- PLACEHOLDER : ton logo ici, 200px de large rend le mieux -->
-<img src="docs/images/logo.png" alt="Even Richer Discord Presence" width="200"/>
+<img src="docs/images/Icon128.png" alt="Even Richer Discord Presence" width="200"/>
 
 # Even Richer Discord Presence
 
@@ -21,7 +21,7 @@
 ---
 
 <!-- PLACEHOLDER : capture principale, une vraie carte de présence Discord -->
-<img src="docs/images/hero.png" alt="Exemple de carte de présence" width="100%"/>
+<img src="docs/images/EvenRicherFabScreenshot01.png" alt="Exemple d'activité" width="100%"/>
 
 ## Pourquoi ce plugin
 
@@ -60,7 +60,7 @@ Vérifie dans **Edit → Plugins** que *Even Richer Discord Presence* est bien a
 2. Ouvre **General Information** et copie l'**Application ID**
 
 <!-- PLACEHOLDER : capture du portail avec l'Application ID entouré -->
-<img src="docs/images/setup-appid.png" alt="Emplacement de l'Application ID" width="70%"/>
+<img src="docs/images/DiscordAppID.png" alt="Emplacement de l'Application ID" width="70%"/>
 
 ### 3. Uploader tes images
 
@@ -74,7 +74,7 @@ Vérifie dans **Edit → Plugins** que *Even Richer Discord Presence* est bien a
 3. Le **nom** que tu donnes à chaque asset est ce que tu mettras dans `Large Image Key`
 
 <!-- PLACEHOLDER : capture de l'onglet Art Assets avec un nom d'asset entouré -->
-<img src="docs/images/setup-artassets.png" alt="Onglet Art Assets" width="70%"/>
+<img src="docs/images/DiscordArts.png" alt="Onglet Art Assets" width="70%"/>
 
 **Dimensions :** carré, 512x512 minimum. La grande image est rendue en carré, donc un visuel 16:9 sera
 rogné.
@@ -93,7 +93,7 @@ acceptent aussi une URL `https://` directe, qui fonctionne instantanément et re
 | **Auto Subscribe To Activity Events** | ✅ | S'abonne automatiquement à Join et Ask to Join. |
 
 <!-- PLACEHOLDER : capture du panneau Project Settings -->
-<img src="docs/images/setup-settings.png" alt="Project Settings" width="70%"/>
+<img src="docs/images/ProjectSettings.png" alt="Project Settings" width="70%"/>
 
 ### 5. Activer l'affichage de l'activité dans Discord
 
@@ -129,7 +129,7 @@ depuis sa sortie pour atteindre tout le reste.
 manuel de callbacks.
 
 <!-- PLACEHOLDER : capture de ce graphe Blueprint exact -->
-<img src="docs/images/quickstart-graph.png" alt="Graphe de démarrage rapide" width="90%"/>
+<img src="docs/images/BasicGraph.png" alt="Graphe de démarrage rapide" width="90%"/>
 
 **Résultat :**
 
