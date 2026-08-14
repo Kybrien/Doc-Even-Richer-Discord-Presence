@@ -21,7 +21,7 @@
 ---
 
 <!-- PLACEHOLDER: hero screenshot, a real Discord profile showing a full presence card -->
-<img src="docs/images/hero.png" alt="Presence card example" width="100%"/>
+<img src="docs/images/EvenRicherFabScreenshot01.png" alt="Presence card example" width="100%"/>
 
 ## Why this plugin
 
