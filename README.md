@@ -59,7 +59,7 @@ Check **Edit → Plugins** that *Even Richer Discord Presence* is enabled.
 2. Open **General Information** and copy the **Application ID**
 
 <!-- PLACEHOLDER: screenshot of the Developer Portal with the Application ID highlighted -->
-<img src="docs/images/setup-appid.png" alt="Application ID location" width="70%"/>
+<img src="docs/images/DiscordAppID.png" alt="Application ID location" width="70%"/>
 
 ### 3. Upload your artwork
 
