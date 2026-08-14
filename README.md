@@ -125,7 +125,7 @@ output to reach everything else.
 **That is the whole integration.** No Game Instance wiring, no cast, no tick, no manual callback pump.
 
 <!-- PLACEHOLDER: screenshot of this exact Blueprint graph -->
-<img src="docs/images/quickstart-graph.png" alt="Quick start graph" width="90%"/>
+<img src="docs/images/BasicGraph.png" alt="Quick start graph" width="90%"/>
 
 **Result:**
 
