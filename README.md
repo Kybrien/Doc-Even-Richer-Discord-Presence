@@ -73,7 +73,7 @@ Check **Edit → Plugins** that *Even Richer Discord Presence* is enabled.
 3. The **name** you give each asset is what goes into `Large Image Key`
 
 <!-- PLACEHOLDER: screenshot of the Art Assets tab with an asset name highlighted -->
-<img src="docs/images/setup-artassets.png" alt="Art Assets tab" width="70%"/>
+<img src="docs/images/DiscordArts.png" alt="Art Assets tab" width="70%"/>
 
 **Sizing:** square, 512x512 minimum. The large image renders square, so a 16:9 image gets cropped.
 
