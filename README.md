@@ -768,7 +768,7 @@ EOS. This is not a limitation of this plugin, it is how Discord Rich Presence wo
 
 **Found a bug? Need a feature? Have a question?**
 
-[![Discord](https://img.shields.io/badge/Poser%20une%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
+[![Discord](https://img.shields.io/badge/Ask%20a%20question-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
 [![Fab](https://img.shields.io/badge/Fab-Listing-FF6B00?style=for-the-badge)](https://www.fab.com/sellers/Kybrien)
 
 *Built by Kybrien, the developer of Twitch StreamSync.*
