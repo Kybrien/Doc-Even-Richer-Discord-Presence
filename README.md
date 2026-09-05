@@ -86,9 +86,11 @@ direct `https://` URL, which works instantly and is handy for testing.
 
 | Setting | Default | Purpose |
 |---|:---:|---|
-| **Client Id** | *empty* | Your Discord Application ID. **Required.** |
+| **Enabled** | ✅ | Master switch. Untick it and the plugin does nothing at all, including on an explicit `Connect`. |
+| **Client Id** | *empty* | Your Discord Application ID. **Required.** Also used by `Connect` when its pin is left empty, and checked as you type it. |
 | **Auto Connect On Startup** | ✅ | Connects on game start. When off, the connection opens on the first presence call. |
 | **Auto Subscribe To Activity Events** | ✅ | Subscribes to Join and Ask to Join automatically. |
+| **Only Connect On First Instance In PIE** | ✅ | Editor only. Keeps Play In Editor to one Discord connection instead of one per client. |
 
 <!-- PLACEHOLDER: screenshot of the Project Settings panel -->
 <img src="docs/images/ProjectSettings.png" alt="Project Settings" width="70%"/>
@@ -141,7 +143,7 @@ Exploring              ← State
 
 ## 🧩 Node reference
 
-**20 Blueprint nodes, 6 events.** Every one carries a tooltip in the editor.
+**21 Blueprint nodes, 6 events.** Every one carries a tooltip in the editor.
 
 ### Entry point
 
@@ -156,6 +158,7 @@ Exploring              ← State
 <table>
 <tr><th>Node</th><th>What it does</th></tr>
 <tr><td><b>Set Presence</b></td><td>The main node. Sets what appears on the profile.</td></tr>
+<tr><td><b>Set Presence Links</b></td><td>Sets or clears the two clickable links. Merges into the presence already set.</td></tr>
 <tr><td><b>Restart Elapsed Timer</b></td><td>Resets the counting up timer to zero and pushes immediately.</td></tr>
 <tr><td><b>Clear Presence</b></td><td>Removes the presence without closing the connection.</td></tr>
 <tr><td><b>Set Advanced Presence</b></td><td>Takes the full <code>Discord Activity</code> struct.</td></tr>
@@ -213,14 +216,15 @@ frame with the same duration keeps a stable deadline.
 
 <br/>
 
-It is **not** "Set Presence with more options unlocked". Exactly four fields are reachable only here:
+It is **not** "Set Presence with more options unlocked". Exactly two fields are reachable only here:
 
 | Field | Why it is not on Set Presence |
 |---|---|
 | `Start Timestamp` | `Show Elapsed Timer` already does this correctly. |
 | `End Timestamp` | `Countdown Seconds` already does this correctly. |
-| `Details Url` | Niche, would add a pin most projects never touch. |
-| `State Url` | Same, and it only renders without a party. |
+
+*`Details Url` and `State Url` used to be here too. They now have their own node,
+`Set Presence Links`, which merges instead of replacing.*
 
 The other reason to use it: the struct is **storable**. Presence presets can live in a Data Table and
 be passed between functions, which is the only data driven path in the plugin.
@@ -264,7 +268,7 @@ Party ID derivation, session preservation and every diagnostic apply here exactl
 
 | Node | Returns | What it does |
 |---|:---:|---|
-| **Connect** | | Connects with a given Client ID. Only needed to override the settings ID or control timing. |
+| **Connect** | | Connects. Leave the `Client Id` pin empty to use the one from Project Settings, or fill it to override at runtime. Only needed to control timing. Calling it on a connection that is already up does nothing. |
 | **Disconnect** | | Closes the connection and clears the presence. |
 | **Is Connected** | `Bool` | True once the handshake has completed. |
 | **Get Connection State** | `Enum` | `Disconnected` / `Connecting` / `Connected`. |
@@ -329,7 +333,7 @@ join request, so there is no leave event, no party update and no member list.*
 | `Activity Type` | Set Presence |
 | `Status Display Type` | Set Presence |
 | `State` / `Details` | Set Presence |
-| `Details Url` / `State Url` | Set Advanced Presence only |
+| `Details Url` / `State Url` | Set Presence Links |
 | `Start Timestamp` / `End Timestamp` | Set Advanced Presence only |
 | `Large Image Key` / `Text` | Set Presence |
 | `Small Image Key` / `Text` | Set Presence |
@@ -648,17 +652,36 @@ the Client ID from Project Settings. No `Is Connected` guard needed.
 **The elapsed timer does not reset** when you call `Set Presence` again to refresh text.
 
 **An active joinable session is preserved** across `Set Presence` calls, unless you pass buttons.
+**A published party is preserved** in every case: Discord refuses buttons alongside a join secret, but
+not alongside a party, so passing buttons costs you Ask to Join and keeps the count.
 
 **Automatic reconnection.** If Discord is not running or restarts mid game, the worker reconnects on
 its own (backoff 1, 2, 4, 8, 16, 30 seconds, 10 attempts) and **re-pushes the last presence**, so the
 profile does not blank. Subscriptions self heal too.
 
+**Links survive a text refresh.** Once set with `Set Presence Links`, `Details Url` and `State Url`
+stay on the presence through every later `Set Presence`. Call the node again with both pins empty to
+remove them.
+
 **Timestamps are absolute, not durations.** `Start Timestamp` and `End Timestamp` on
 `Set Advanced Presence` are absolute Unix timestamps in **seconds**. Passing `60` means "sixty seconds
 after 1970". Use the **Now** and **Discord Time From Now** helpers.
 
-**Play In Editor:** each PIE session gets its own game instance and therefore its own connection. Test
-presence with a **single** PIE client.
+**Play In Editor:** each PIE instance gets its own game instance and therefore its own connection to
+the same Discord account, so several clients overwrite each other's presence. By default only the
+**first** instance connects and the others log one line saying so. Untick
+**Only Connect On First Instance In PIE** to let them all connect. An explicit `Connect` always
+overrides the rule, so a second instance can still be connected on purpose to test the join flow, and
+packaged builds ignore the setting entirely.
+
+*The Discord rate limit is not what this addresses: each instance has its own connection and its own
+throttle, so four clients are four independent connections, not four calls stacked on one. The problem
+is noise and last writer wins.*
+
+**Discord validates the activity as a whole.** One malformed button URL or one field past its length
+limit and nothing reaches the profile at all, not the text and not the art. The plugin checks for that
+before sending and names the field in the log, at `Error` level, so a blank profile stops being a
+mystery.
 
 **Dedicated servers and commandlets:** the subsystem is created but does not connect. Intended.
 
@@ -674,6 +697,8 @@ presence with a **single** PIE client.
 | Symptom | Cause |
 |---|---|
 | **Nothing appears on the profile** | *Activity Privacy → Display current activity* is off in the Discord client. Per player setting, no code can override it. |
+| **Nothing happens and the log says the plugin is disabled** | **Enabled** is unticked in Project Settings. `Connect` will not override it. |
+| **Everything vanished right after you added a button** | The button URL starts with neither `http://` nor `https://`, or a field is over Discord's length limit. Discord refuses the whole activity. The log names the field. |
 | **Grey square with a `?` instead of the image** | The image was uploaded as **Cover Image**, not under **Rich Presence → Art Assets**. Only Art Assets have a usable name. |
 | **Image missing and no hover text either** | Same cause. `Large Image Text` is a tooltip attached to the image, with no image resolved there is nothing to hover. |
 | **No Ask to Join button** | `Activity Type` is not `Playing`. Or: missing join secret, missing party size/max, or the presence also carries profile buttons. Also, Discord never shows it on your own profile. |
@@ -692,6 +717,8 @@ presence with a **single** PIE client.
 | `On Connection Error` code `4000` | Discord rejected the payload. The log carries Discord's exact message. |
 | `On Ready` sometimes fires, sometimes not | You bound after the handshake completed. Bind **and** check `Is Connected`. |
 | Works in editor, not packaged | The Client ID did not ship in `DefaultGame.ini`. |
+| Only one PIE client shows a presence | Intended. **Only Connect On First Instance In PIE** is on. Call `Connect` on the other instance, or untick the setting. |
+| `LNK1104` on `...suppressed.lib` while packaging | Windows path length limit, not the plugin. Move the project and the output folder closer to the drive root. |
 
 </details>
 
@@ -722,6 +749,8 @@ presence with a **single** PIE client.
 | `Status Display Type` seems to do nothing | You are looking at the profile card. This only changes the one line status in a member list. |
 | `State Url` does nothing, no hover, no click | A party is published. Discord merges the party count into the State line and will not link a composite line. |
 | Profile buttons disappeared | You made the session joinable. Buttons and secrets are mutually exclusive. |
+| `Set Presence Links` does nothing | No presence is published yet. It merges into the current presence, so call `Set Presence` first. A single warning is logged. |
+| Hover text never shows | The matching image key is empty. The text is a tooltip on the image, so with no image there is nothing to hover. |
 
 </details>
 
