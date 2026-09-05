@@ -12,7 +12,7 @@
 [![Fab](https://img.shields.io/badge/Get%20it%20on-Fab-5865F2?style=for-the-badge)](https://www.fab.com/sellers/Kybrien)
 [![Support](https://img.shields.io/badge/Support-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BwhyxQAAUn)
 
-**English** · [Documentation en français](README.fr.md)
+**English** · [Documentation en français](README_fr.md)
 
 [Setup](#-setup) · [Quick start](#-quick-start) · [Node reference](#-node-reference) · [Recipes](#-recipes) · [Troubleshooting](#-troubleshooting)
 
